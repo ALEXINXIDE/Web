@@ -9,7 +9,82 @@
         body {
             margin: 0;
             overflow: hidden;
-            background-color: #000; /* Change as needed */
+            background: linear-gradient(to bottom, #0a0a0a, #1e1e1e);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            position: absolute;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            background: rgba(20, 20, 20, 0.8);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(0, 255, 204, 0.3);
+            border-radius: 5px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .list {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .item {
+            min-width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .item img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: -50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .buttons button {
+            background: #00ffcc;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .buttons button:hover {
+            transform: scale(1.05);
         }
 
         #snow-container {
@@ -23,25 +98,42 @@
 
         .snowflake {
             position: absolute;
-            background: white;
-            opacity: 0.8;
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 50%;
             pointer-events: none;
+            filter: blur(1px);
         }
 
         @keyframes fall {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(100vh);
-            }
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
         }
 
         .snowflake {
             animation-name: fall;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
+        }
+
+        .arrows {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .arrows button {
+            background: rgba(0, 255, 204, 0.5);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .arrows button:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -55,19 +147,15 @@
         </nav>
     </header>
 
-    <!-- home -->
     <div class="carousel">
-        <!-- list item -->
         <div class="list">
             <div class="item">
-                <img src="images/img3.jpg">
+                <img src="images/img3.jpg" alt="ZAINX Official">
                 <div class="content">
                     <div class="author">WEB - X</div>
                     <div class="title">OFFICAL</div>
                     <div class="topic">ZAINX</div>
-                    <div class="des">
-                        Hello Guys ZAIN KHAN Here Creator of (ZAINIX) Apps &amp; Tools this is the Offical Website You can Use Free Trail of Server click on Servers &amp; Get Free Servers &amp; Download my App for Paid Servers So Click the Servers Button &amp; Get the Offical (ZAINIX) Free Servers &amp; APP  24/7 Runnings &amp; Support Features: POST &amp; CONVO &amp; AI &amp; BOTS &amp; EXTRACTORS Thanks For Using.
-                    </div>
+                    <div class="des">Hello, I’m ZAIN KHAN, creator of ZAINIX Apps & Tools. This is the official website where you can try our servers for free!</div>
                     <div class="buttons">
                         <button>OFFICAL</button>
                         <button>WEB</button>
@@ -75,14 +163,12 @@
                 </div>
             </div>
             <div class="item">
-                <img src="images/img1.jpg">
+                <img src="images/img1.jpg" alt="Creator">
                 <div class="content">
                     <div class="author">WEB - X</div>
                     <div class="title">CREATOR</div>
                     <div class="topic">ZAINX</div>
-                    <div class="des">
-                        Are You Looking any Offline Server or App?
-                    </div>
+                    <div class="des">Are you looking for any offline server or app?</div>
                     <div class="buttons">
                         <button>CLICK</button>
                         <button>PAID</button>
@@ -90,14 +176,12 @@
                 </div>
             </div>
             <div class="item">
-                <img src="images/img5.jpg">
+                <img src="images/img5.jpg" alt="Social Media">
                 <div class="content">
                     <div class="author">WEB-X</div>
                     <div class="title">SOCIAL</div>
                     <div class="topic">YOUTUBE</div>
-                    <div class="des">
-                        You Can Watch Tutorials &amp; Tricks on My Youtube Channel @ZAIN_KHAN OFFICIAL.
-                    </div>
+                    <div class="des">Watch tutorials and tricks on my YouTube channel @ZAIN_KHAN OFFICIAL.</div>
                     <div class="buttons">
                         <button>ZAINIX</button>
                         <button>V:10</button>
@@ -105,14 +189,12 @@
                 </div>
             </div>
             <div class="item">
-                <img src="images/img4.jpg">
+                <img src="images/img4.jpg" alt="Users">
                 <div class="content">
                     <div class="author">WEB - X</div>
                     <div class="title">USERS</div>
                     <div class="topic">PRIVATE</div>
-                    <div class="des">
-                        Are You Join Team of VIP Users then Click on Paid &amp; Get the (ZAINIX) APP &amp; make a Part of VIP Users Team?
-                    </div>
+                    <div class="des">Join the team of VIP users! Click on Paid to get the (ZAINIX) app.</div>
                     <div class="buttons">
                         <button>SECURE</button>
                         <button>24/7</button>
@@ -120,29 +202,14 @@
                 </div>
             </div>
         </div>
-        <!-- list thumbnail -->
-        <div class="thumbnail">
-            <div class="item">
-                <div class="content">
-                    <div class="title">
-                       Latest Version
-                    </div>
-                    <div class="description">
-                       ZAINX
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- next prev -->
+
         <div class="arrows">
             <button id="prev">&lt;</button>
             <button id="next">&gt;</button>
         </div>
-        <!-- time running -->
-        <div class="time"></div>
     </div>
 
-    <div id="snow-container"></div> <!-- Snowfall container -->
+    <div id="snow-container"></div>
 
     <script src="js/script.js"></script>
     <script src="js/contact.js"></script>
@@ -153,17 +220,12 @@
         function createSnowflake() {
             const snowflake = document.createElement('div');
             snowflake.classList.add('snowflake');
-            
-            const size = Math.random() * 5 + 2; // Random size between 2 and 7
+            const size = Math.random() * 5 + 2;
             snowflake.style.width = `${size}px`;
             snowflake.style.height = `${size}px`;
-            
             snowflake.style.left = `${Math.random() * 100}vw`;
             snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
-            
             snowContainer.appendChild(snowflake);
-            
-            // Remove snowflake after animation
             snowflake.addEventListener('animationend', () => {
                 snowflake.remove();
             });
@@ -173,8 +235,8 @@
             createSnowflake();
         }
 
-        setInterval(createSnowflake, 500); // Create new snowflakes
+        setInterval(createSnowflake, 500);
     </script>
 </body>
-    </html>
-                
+                    </html>
+                    
